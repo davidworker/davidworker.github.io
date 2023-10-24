@@ -4,7 +4,7 @@
     width: 100%;
     height: 100vh;
     top: 0;
-    left:0;
+    left: 0;
 }
 
 .ad-block {
@@ -19,17 +19,43 @@
     border-radius: 6px;
 }
 
+.ad-title {
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.ad-content {
+    line-height: 40px;
+}
+
+.fn-block {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+}
+
 .btn {
     padding: 10px 20px;
-    border:0;
+    border: 0;
     margin-top: 20px;
     background: rgba(235, 28, 28, 0.933);
     color: #fff;
     font-size: 30px;
-    transition: 0.5s;
     cursor: pointer;
+    animation-name: run;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-direction: alternate;
 }
 
-.btn:hover {
-    transform: scale(2);
+@keyframes run {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
 }
