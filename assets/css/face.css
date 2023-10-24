@@ -1,0 +1,44 @@
+.face {
+    width: 300px;
+    height: 300px;
+    background: #ff6325;
+    position: fixed;
+    top: calc(50% - 150px);
+    left: calc(50% - 150px)
+}
+
+.face .eye {
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    position: absolute;
+    border-radius: 80px;
+    top: 60px;
+}
+
+.face .eye.left {
+    left: 40px;
+}
+
+.face .eye.right {
+    right: 40px;
+}
+
+.face .eye .point {
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    background: #000;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.face .mouth {
+    width: 120px;
+    height: 60px;
+    position: absolute;
+    bottom: 30px;
+    background-color: #fff;
+    left: 90px;
+}
