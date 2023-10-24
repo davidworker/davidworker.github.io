@@ -56,3 +56,41 @@
     height: 100px;
     line-height: 100px;
 }
+
+
+.b1 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: #dedede;
+    z-index: 1;
+}
+
+.b2 {
+    position: fixed;
+    top: 52%;
+    left: 52%;
+    width: 100px;
+    height: 100px;
+    background: #d65252;
+    z-index: 1;
+}
+
+
+.b1-1 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: red;
+    z-index: 1;
+}
+
+.b2-2 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: rgb(235, 213, 15);
+    z-index: 3;
+}
