@@ -1,0 +1,64 @@
+body {
+    background-color: #000;
+}
+
+.login-wrap {
+    position: fixed;
+    width: 400px;
+    height: 500px;
+    background: #fff;
+    top: calc(50% - 250px);
+    left: calc(50% - 150px);
+    border-radius: 4px;
+}
+
+.login-content {
+    padding: 20px;
+}
+
+.slogan {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000;
+    letter-spacing: 2px;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.form-item label {
+    font-size: 16px;
+}
+
+.form-item input {
+    width: 100%;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    border: 2px solid #dedede;
+    border-radius: 4px;
+    outline: 0;
+}
+
+.login-func {
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-func button {
+    padding: 10px 20px;
+    border: 0;
+    background: #1973a7;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
