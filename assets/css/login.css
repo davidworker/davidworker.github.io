@@ -3,12 +3,14 @@ body {
 }
 
 .login-wrap {
+    --w: 400px;
+    --h: 400px;
     position: fixed;
-    width: 400px;
-    height: 500px;
+    width: var(--w);
+    height: var(--h);
     background: #fff;
-    top: calc(50% - 250px);
-    left: calc(50% - 150px);
+    top: calc(50% - (var(--h) / 2));
+    left: calc(50% - (var(--w) / 2));
     border-radius: 4px;
 }
 
