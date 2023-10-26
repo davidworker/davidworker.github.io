@@ -1,5 +1,5 @@
 body {
-    background-color: #000;
+    background-color: #bdbdbd;
 }
 
 .login-wrap {
@@ -12,6 +12,7 @@ body {
     left: calc(50% - (var(--w) / 2));
     top: calc(50% - (var(--h) / 2));
     border-radius: 4px;
+    z-index: 2;
 }
 
 .login-content {
@@ -63,4 +64,54 @@ body {
     color: #fff;
     font-size: 14px;
     font-family: 'Noto Sans TC', sans-serif;
+}
+
+.login-success {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #00000063;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.login-success.active {
+    display: flex;
+}
+
+.message-wrap {
+    background: #fff;
+    padding: 20px;
+    min-width: 300px;
+    min-height: 200px;
+    border-radius: 4px;
+}
+
+.message-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.message-content {
+    text-align: center;
+}
+
+.message-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+
+.message-btn .btn {
+    border: 0;
+    padding: 10px 20px;
+    background: #1743a0;
+    color: #fff;
+    cursor: pointer;
 }

@@ -38,3 +38,8 @@
         width: 100%;
     }
 }
+
+
+.nth li:nth-child(1) {
+    color: red;
+}
