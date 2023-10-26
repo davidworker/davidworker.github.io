@@ -57,13 +57,15 @@ body {
     justify-content: space-between;
 }
 
-.login-func button {
+.login-func button,
+.login-func label {
     padding: 10px 20px;
     border: 0;
     background: #1973a7;
     color: #fff;
     font-size: 14px;
     font-family: 'Noto Sans TC', sans-serif;
+    cursor: pointer;
 }
 
 .login-success {
@@ -80,7 +82,11 @@ body {
     display: none;
 }
 
-.login-success.active {
+#popup-switch {
+    display: none;
+}
+
+#popup-switch:checked~.login-success {
     display: flex;
 }
 
