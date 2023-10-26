@@ -1,0 +1,51 @@
+.slogan {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.item {
+    background: #dedede;
+}
+
+.item-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #2246a8;
+    color: #fff;
+    font-size: 24px;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+    user-select: none;
+}
+
+.item-title:hover {
+    background: rgb(236, 135, 19);
+}
+
+.item-content {
+    background-color: #22a838;
+    color: #fff;
+    padding: 20px;
+    display: none;
+}
+
+.item-title .minus {
+    display: none;
+}
+
+.ms-switch {
+    display: none;
+}
+
+.ms-switch:checked~.item-title .plus {
+    display: none;
+}
+
+.ms-switch:checked~.item-title .minus {
+    display: block;
+}
+
+.ms-switch:checked~.item-content {
+    display: block;
+}
