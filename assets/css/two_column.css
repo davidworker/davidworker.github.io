@@ -1,0 +1,40 @@
+.row {
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.col {
+    width: 50%;
+    background: #dedede;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+.profile {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.order {
+    background-color: green;
+}
+
+.save-btn {
+    width: 100%;
+    height: 50px;
+    background: red;
+    color: #fff;
+}
+
+@media screen and (max-width: 800px) {
+    .row {
+        flex-direction: column-reverse;
+    }
+
+    .col {
+        width: 100%;
+    }
+}

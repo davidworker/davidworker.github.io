@@ -4,13 +4,13 @@ body {
 
 .login-wrap {
     --w: 400px;
-    --h: 400px;
+    --h: 390px;
     position: fixed;
     width: var(--w);
     height: var(--h);
     background: #fff;
-    top: calc(50% - (var(--h) / 2));
     left: calc(50% - (var(--w) / 2));
+    top: calc(50% - (var(--h) / 2));
     border-radius: 4px;
 }
 
