@@ -101,3 +101,22 @@ body {
     width: 50%;
     padding: 20px;
 }
+
+.slogan {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.slogan::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% - 140px);
+    width: 0;
+    height: 3px;
+    border-left: 100px solid #1072c2;
+    border-right: 180px solid #fff;
+}
