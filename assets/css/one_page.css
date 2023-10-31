@@ -23,6 +23,7 @@ body {
     position: fixed;
     width: 100%;
     height: 80px;
+    z-index: 3;
 }
 
 .header-row {
@@ -70,4 +71,12 @@ body {
     background-color: rgb(63, 63, 63);
     background-image: url(../images/one_page/banner.jpeg);
     background-size: cover;
+    position: relative;
+}
+
+.mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.116);
 }
