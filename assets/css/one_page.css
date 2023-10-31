@@ -74,7 +74,8 @@ body {
     position: relative;
 }
 
-.mask {
+.p-1::before {
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
