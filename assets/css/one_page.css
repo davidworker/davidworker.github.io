@@ -18,3 +18,43 @@ body {
 .copyright {
     font-size: 0.9rem;
 }
+
+.header {
+    height: 80px;
+}
+
+.header-row {
+    background: #fff;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.header-row .menu ul {
+    display: flex;
+    gap: 20px;
+}
+
+.header-row .menu li {
+    text-align: center;
+}
+
+.header-row .menu .en {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.header-row .menu .zh {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+
+.main {
+    height: 100vh;
+}
