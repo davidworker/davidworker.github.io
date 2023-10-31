@@ -62,6 +62,12 @@ body {
 }
 
 
-.main {
+.page {
     height: 100vh;
+}
+
+.p-1 {
+    background-color: rgb(63, 63, 63);
+    background-image: url(../images/one_page/banner.jpeg);
+    background-size: cover;
 }
