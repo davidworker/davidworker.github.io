@@ -1,5 +1,5 @@
 body {
-    background: #dedede;
+    background: #000000;
     font-size: 16px;
 }
 
@@ -20,11 +20,13 @@ body {
 }
 
 .header {
+    position: fixed;
+    width: 100%;
     height: 80px;
 }
 
 .header-row {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.89);
     height: 100%;
     display: flex;
     align-items: center;
@@ -42,6 +44,11 @@ body {
 
 .header-row .menu li {
     text-align: center;
+    transition: 0.4s;
+}
+
+.header-row .menu li:hover {
+    color: red;
 }
 
 .header-row .menu .en {
