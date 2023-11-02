@@ -178,3 +178,15 @@ body {
 .form-button button:hover {
     background: rgb(255, 59, 45);
 }
+
+
+.p-2 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-image: url(../images/one_page/process.jpeg);
+    background-size: cover;
+}
+
+.p-2 .slogan {
+    color: #fff;
+}
