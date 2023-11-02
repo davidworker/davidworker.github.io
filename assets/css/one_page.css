@@ -217,4 +217,25 @@ body {
     height: var(--r);
     border-radius: var(--r);
     background-color: red;
+    position: relative;
+    z-index: 2;
+}
+
+.flow-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 4px;
+}
+
+.flow-item::after {
+    content: "";
+    width: 0;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    border: 2px dashed #fff;
 }
