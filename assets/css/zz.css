@@ -1,3 +1,8 @@
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+}
+
 .header {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -13,4 +18,50 @@
     flex: 1;
     align-items: center;
     justify-content: space-between;
+}
+
+.link-button {
+    display: flex;
+    gap: 10px;
+}
+
+.link-button a {
+    display: inline-block;
+    background-color: #eeeeee;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: 0.4s;
+    font-size: 1.2rem;
+}
+
+.link-button a:hover,
+.link-button li.active a {
+    color: rgb(14, 60, 160);
+}
+
+
+
+
+
+
+
+.ff {
+    display: flex;
+    height: 100px;
+}
+
+.f1 {
+    flex: 1;
+    background: red;
+}
+
+.f2 {
+    flex: 2;
+    background-color: yellow;
+}
+
+.w100 {
+    width: 100px;
+    background: blue;
 }
