@@ -209,6 +209,8 @@ body {
     text-align: center;
     position: relative;
     z-index: 3;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .item-circle {
@@ -238,4 +240,18 @@ body {
     top: 0;
     height: 100%;
     border: 2px dashed #fff;
+}
+
+.item-content {
+    position: absolute;
+    left: calc(50% + 50px);
+    padding: 20px;
+    background: #0f7b83;
+    color: #fff;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.item-content h2 {
+    margin-bottom: 15px;
 }
