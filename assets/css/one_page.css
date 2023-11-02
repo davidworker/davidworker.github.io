@@ -255,3 +255,10 @@ body {
 .item-content h2 {
     margin-bottom: 15px;
 }
+
+.flow-item:nth-child(even) .item-content {
+    left: unset;
+    right: calc(50% + 50px);
+    text-align: right;
+
+}
