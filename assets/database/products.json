@@ -1,0 +1,72 @@
+[
+    {
+        "name": "商品項目 1",
+        "cover": "assets/images/one_page/logo.svg",
+        "intro": "商品說明 1"
+    },
+    {
+        "name": "商品項目 2",
+        "cover": "assets/images/one_page/logo.svg",
+        "intro": "商品說明 2"
+    },
+    {
+        "name": "商品項目 3",
+        "cover": "assets/images/one_page/logo.svg",
+        "intro": "商品說明 3"
+    },
+    {
+        "name": "商品項目 4",
+        "cover": "assets/images/one_page/logo.svg",
+        "intro": "商品說明 4"
+    },
+    {
+        "name": "商品項目 5",
+        "cover": "assets/images/one_page/logo.svg",
+        "intro": "商品說明 5"
+    },
+    {
+        "name": "商品項目 6",
+        "cover": "assets/images/one_page/logo.svg",
+        "intro": "商品說明 6"
+    },
+    {
+        "name": "商品項目 7",
+        "cover": "assets/images/one_page/logo.svg",
+        "intro": "商品說明 7"
+    },
+    {
+        "name": "商品項目 8",
+        "cover": "assets/images/one_page/logo.svg",
+        "intro": "商品說明 8"
+    },
+    {
+        "name": "商品項目 9",
+        "cover": "assets/images/one_page/logo.svg",
+        "intro": "商品說明 9"
+    },
+    {
+        "name": "商品項目 10",
+        "cover": "assets/images/one_page/logo.svg",
+        "intro": "商品說明 10"
+    },
+    {
+        "name": "商品項目 11",
+        "cover": "assets/images/one_page/logo.svg",
+        "intro": "商品說明 11"
+    },
+    {
+        "name": "商品項目 12",
+        "cover": "assets/images/one_page/logo.svg",
+        "intro": "商品說明 12"
+    },
+    {
+        "name": "商品項目 13",
+        "cover": "assets/images/one_page/logo.svg",
+        "intro": "商品說明 13"
+    },
+    {
+        "name": "商品項目 14",
+        "cover": "assets/images/one_page/logo.svg",
+        "intro": "商品說明 14"
+    }
+]

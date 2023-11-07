@@ -1,0 +1,13 @@
+.mini {
+    font-size: 4px;
+}
+
+.wrap {
+    margin: 50px auto;
+    width: 300px;
+    background: yellow;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

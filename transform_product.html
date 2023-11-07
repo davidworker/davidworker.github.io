@@ -11,79 +11,48 @@
 
 <body>
     <div class="container">
-        <div class="product-wrap">
-            <div class="product-item">
-                <div class="product-image">
-                    <img src="assets/images/one_page/logo.svg" alt="">
-                    <div class="product-discount-bar">Off 20%</div>
-                </div>
-                <div class="product-content">
-                    <div class="product-name">Product Name</div>
-                    <div class="product-intro">Intro</div>
-                </div>
+        <div id="app">
+            <h1>產品列表</h1>
+            <div class="fn">
+                <button @click="init">載入資料</button>
             </div>
-            <div class="product-item">
-                <div class="product-image">
-                    <img src="assets/images/one_page/logo.svg" alt="">
-                    <div class="product-discount-bar">Off 20%</div>
-                </div>
-                <div class="product-content">
-                    <div class="product-name">Product Name</div>
-                    <div class="product-intro">Intro</div>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="product-image">
-                    <img src="assets/images/one_page/logo.svg" alt="">
-                    <div class="product-discount-bar">Off 20%</div>
-                </div>
-                <div class="product-content">
-                    <div class="product-name">Product Name</div>
-                    <div class="product-intro">Intro</div>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="product-image">
-                    <img src="assets/images/one_page/logo.svg" alt="">
-                    <div class="product-discount-bar">Off 20%</div>
-                </div>
-                <div class="product-content">
-                    <div class="product-name">Product Name</div>
-                    <div class="product-intro">Intro</div>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="product-image">
-                    <img src="assets/images/one_page/logo.svg" alt="">
-                    <div class="product-discount-bar">Off 20%</div>
-                </div>
-                <div class="product-content">
-                    <div class="product-name">Product Name</div>
-                    <div class="product-intro">Intro</div>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="product-image">
-                    <img src="assets/images/one_page/logo.svg" alt="">
-                    <div class="product-discount-bar">Off 20%</div>
-                </div>
-                <div class="product-content">
-                    <div class="product-name">Product Name</div>
-                    <div class="product-intro">Intro</div>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="product-image">
-                    <img src="assets/images/one_page/logo.svg" alt="">
-                    <div class="product-discount-bar">Off 20%</div>
-                </div>
-                <div class="product-content">
-                    <div class="product-name">Product Name</div>
-                    <div class="product-intro">Intro</div>
+            <div class="product-wrap">
+                <div class="product-item" v-for="(product, pindex) in products">
+                    <div class="product-image">
+                        <img src="assets/images/one_page/logo.svg" alt="">
+                        <div class="product-discount-bar">Off 20%</div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-name">{{ product.name }}</div>
+                        <div class="product-intro">{{ product.intro }}</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    Vue.createApp({
+        data() {
+            return {
+                products: [],
+            }
+        },
+        methods: {
+            init() {
+                fetch('assets/database/products.json').then((res) => {
+                    return res.json();
+                }).then(rep => {
+                    this.products = rep
+                })
+            }
+        },
+        mounted() {
+
+        }
+    }).mount('#app')
+</script>
 
 </html>
