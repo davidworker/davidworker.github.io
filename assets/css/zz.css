@@ -63,27 +63,25 @@ body {
     background: #cecece;
 }
 
+.main {
+    height: 150vh;
+}
 
+.footer {
+    background: #fafafa;
+}
 
-
-
-
-.ff {
+.footer .copyright {
     display: flex;
-    height: 100px;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
 }
 
-.f1 {
-    flex: 1;
-    background: red;
+.footer .copyright .copyright-icon {
+    margin-right: 5px;
 }
 
-.f2 {
-    flex: 2;
-    background-color: yellow;
-}
-
-.w100 {
-    width: 100px;
-    background: blue;
+.footer .top-side {
+    display: flex;
 }
