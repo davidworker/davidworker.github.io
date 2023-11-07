@@ -69,6 +69,7 @@ body {
 
 .footer {
     background: #fafafa;
+    border-top: 2px solid #cecece;
 }
 
 .footer .copyright {
@@ -76,6 +77,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 50px;
+    border-top: 2px solid #cecece;
 }
 
 .footer .copyright .copyright-icon {
@@ -84,4 +86,23 @@ body {
 
 .footer .top-side {
     display: flex;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    gap: 60px;
+}
+
+.footer .menu {
+    display: flex;
+    gap: 60px;
+}
+
+.footer .menu .menu-title {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.footer .menu-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
