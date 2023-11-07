@@ -16,3 +16,7 @@
     align-items: center;
     justify-content: center;
 }
+
+.word {
+    transform: rotate(135deg);
+}
