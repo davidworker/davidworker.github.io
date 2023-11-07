@@ -1,0 +1,45 @@
+.product-wrap {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.product-wrap>div {
+    width: calc(32%);
+}
+
+
+.product-item {
+    background: #dedede;
+    padding: 10px;
+}
+
+.product-image {
+    padding: 10px;
+    background: #fff;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.product-image img {
+    max-width: 100%;
+}
+
+.product-discount-bar {
+    position: absolute;
+    top: 16px;
+    right: -75px;
+    background: rgb(238, 60, 60);
+    color: #fff;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transform: rotate(45deg);
+}
