@@ -37,6 +37,10 @@
     animation-name: change-color2;
 }
 
+.block.infinite {
+    animation-iteration-count: infinite;
+}
+
 
 .block.property {
     transition-property: background-color;
@@ -47,6 +51,7 @@
     flex-direction: column;
     gap: 20px;
     position: relative;
+    height: 500px;
 }
 
 .info-item {
@@ -75,6 +80,28 @@
 
 .info-wrap.active .t2 {
     right: 50%;
+}
+
+.runrunrun {
+    position: relative;
+    left: 0;
+}
+
+.runrunrun.active {
+    animation-name: runrunrun;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes runrunrun {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: 300px;
+    }
 }
 
 @keyframes change-color {

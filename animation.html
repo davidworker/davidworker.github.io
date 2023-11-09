@@ -14,7 +14,8 @@
     <div class="container">
         <div class="fn">
             <button onclick="toggleBlock()">Block</button>
-            <button onclick="toggleBlock()">Block</button>
+            <button onclick="toggleBlock('infinite')">Block Infinite</button>
+            <button onclick="toggleRun()">RunRunRun</button>
         </div>
         <div class="wrap">
             <div class="block">
@@ -35,14 +36,33 @@
             </div>
         </div>
     </div>
+
+    <div class="container">
+        <div class="wrap">
+            <div class="runrunrun">
+                runrunrun....
+            </div>
+        </div>
+    </div>
 </body>
 <script>
     const blockEl = document.querySelector('.block');
-    function toggleBlock() {
+    function toggleBlock(append) {
         if (blockEl.classList.contains('change-color')) {
             blockEl.classList.remove('change-color');
+            blockEl.classList.remove(append);
         } else {
             blockEl.classList.add('change-color');
+            blockEl.classList.add(append);
+        }
+    }
+
+    const runEl = document.querySelector('.runrunrun');
+    function toggleRun(append) {
+        if (runEl.classList.contains('active')) {
+            runEl.classList.remove('active');
+        } else {
+            runEl.classList.add('active');
         }
     }
 </script>
