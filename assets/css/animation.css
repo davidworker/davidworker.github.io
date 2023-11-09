@@ -1,5 +1,19 @@
-.wrap {
+.wrap,
+.fn {
     margin: 20px auto;
+}
+
+.fn {
+    display: flex;
+    gap: 20px;
+}
+
+.fn button {
+    padding: 10px 20px;
+    border: 0;
+    background: #2e36a8;
+    color: #fff;
+    cursor: pointer;
 }
 
 .block {

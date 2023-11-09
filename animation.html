@@ -12,6 +12,10 @@
 
 <body>
     <div class="container">
+        <div class="fn">
+            <button onclick="toggleBlock()">Block</button>
+            <button onclick="toggleBlock()">Block</button>
+        </div>
         <div class="wrap">
             <div class="block">
                 TEXT
@@ -32,5 +36,15 @@
         </div>
     </div>
 </body>
+<script>
+    const blockEl = document.querySelector('.block');
+    function toggleBlock() {
+        if (blockEl.classList.contains('change-color')) {
+            blockEl.classList.remove('change-color');
+        } else {
+            blockEl.classList.add('change-color');
+        }
+    }
+</script>
 
 </html>
