@@ -24,3 +24,38 @@
 .block.property {
     transition-property: background-color;
 }
+
+.info-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.info-item {
+    width: 200px;
+    height: 100px;
+    background-color: #dedede;
+    margin-bottom: 20px;
+    transition: 1s;
+}
+
+.info-item.t1 {
+    position: absolute;
+    left: 0;
+}
+
+.info-item.t2 {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    transition-delay: 1s;
+}
+
+.info-wrap.active .t1 {
+    left: 50%;
+}
+
+.info-wrap.active .t2 {
+    right: 50%;
+}
