@@ -1,0 +1,38 @@
+.bg {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background: rgb(29, 95, 219);
+    position: relative;
+}
+
+.cloud {
+    width: 500px;
+    height: 150px;
+    background: #fff;
+    transform: translate(300px, 500px);
+    border-radius: 5000px;
+    position: relative;
+}
+
+.cloud::after {
+    content: '';
+    position: absolute;
+    top: -56px;
+    left: 61px;
+    width: 100px;
+    height: 100px;
+    border-radius: 1000px;
+    background: rgb(255, 255, 255);
+}
+
+.cloud::before {
+    content: '';
+    position: absolute;
+    top: -170px;
+    right: 61px;
+    width: 300px;
+    height: 300px;
+    border-radius: 1000px;
+    background: rgb(255, 255, 255);
+}
