@@ -1,0 +1,23 @@
+.mobile-menu-switch span {
+    cursor: pointer;
+}
+
+.mobile-menu-switch span {
+    width: 30px;
+    height: 5px;
+    background: rgb(73, 73, 73);
+    display: block;
+    margin-bottom: 5px;
+    border-radius: 100px;
+}
+
+.mobile-menu-switch span:last-child {
+    margin-bottom: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+    .header-row .menu {
+        display: none;
+    }
+}
