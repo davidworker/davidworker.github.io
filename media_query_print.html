@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Print Students</title>
+    <style>
+        *,
+        *::after,
+        *::before {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1140px;
+            padding: 0 15px;
+            height: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        .title {
+            line-height: 40px;
+            text-align: center;
+        }
+
+        .table {
+            border-spacing: 0;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .table th,
+        .table td {
+            border: 1px solid #dedede;
+            padding: 10px;
+        }
+
+        .table th {
+            background: #1b75b0;
+            color: #fff;
+        }
+
+        .table-fn {
+            margin: 10px 0;
+            text-align: right;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            border: 0;
+            background: rgb(227, 40, 40);
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        @media print {
+            .table-fn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <h2 class="title">學生成績單</h2>
+            <div class="table-fn">
+                <button class="btn" @click="doPrint">列印</button>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>姓名</th>
+                        <th>成績</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template v-for="(student, sindex) in students" :key="sindex">
+                        <tr>
+                            <td>{{ student.name }}</td>
+                            <td>{{ student.score }}</td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    Vue.createApp({
+        data() {
+            return {
+                students: [],
+            }
+        },
+        methods: {
+            doPrint() {
+                window.print()
+            },
+        },
+        beforeMount() {
+            this.students.push({ name: 'David', score: 80 })
+            this.students.push({ name: 'Helen', score: 90 })
+            this.students.push({ name: 'John', score: 70 })
+            this.students.push({ name: 'May', score: 60 })
+        },
+    }).mount('#app')
+</script>
+
+</html>
