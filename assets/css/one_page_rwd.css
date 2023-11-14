@@ -21,6 +21,22 @@
     background: rgb(235, 85, 27);
 }
 
+.mobile-menu-switch.active span {
+    background: rgb(235, 85, 27);
+}
+
+.mobile-menu-switch.active span:first-child {
+    transform: rotate(45deg) translate(2px, 5px);
+}
+
+.mobile-menu-switch.active span:nth-child(2) {
+    display: none;
+}
+
+.mobile-menu-switch.active span:last-child {
+    transform: rotate(-45deg) translate(2px, -4px);
+}
+
 
 @media screen and (max-width: 768px) {
     .header-row {
@@ -30,7 +46,7 @@
     }
 
     .header-row .menu {
-        /* display: none; */
+        display: none;
         position: absolute;
         top: 80px;
         left: 0;
