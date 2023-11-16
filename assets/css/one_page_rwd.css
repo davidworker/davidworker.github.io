@@ -32,9 +32,8 @@
     }
 
     .header-row .menu {
-        display: none;
         position: absolute;
-        top: 80px;
+        top: -999em;
         left: 0;
         width: 100%;
         background: rgba(255, 255, 255, 0.89);
@@ -42,6 +41,10 @@
         border-bottom-right-radius: 8px;
         padding-top: 20px;
         padding-bottom: 20px;
+        transition-duration: 0.4s;
+        transition-property: height;
+        height: 0;
+        overflow: hidden;
     }
 
     .header-row .menu ul {
@@ -58,7 +61,8 @@
     }
 
     #mobile-menu-trigger:checked~.header-row .menu {
-        display: block;
+        top: 80px;
+        height: 200px;
     }
 
     #mobile-menu-trigger:checked~.header-row .mobile-menu-switch span {
