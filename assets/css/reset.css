@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    scroll-behavior: smooth;
+}
+
 ul {
     list-style-type: none;
 }
