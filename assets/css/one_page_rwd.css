@@ -26,7 +26,7 @@
 }
 
 .mobile-menu-switch.active span:first-child {
-    transform: rotate(45deg) translate(2px, 5px);
+    transform: rotate(45deg) translate(3px, 5px);
 }
 
 .mobile-menu-switch.active span:nth-child(2) {
@@ -41,8 +41,8 @@
 @media screen and (max-width: 768px) {
     .header-row {
         position: relative;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
+        /* border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0; */
     }
 
     .header-row .menu {
