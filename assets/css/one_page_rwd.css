@@ -98,4 +98,25 @@
         height: 3px;
         width: calc(100% - 40px);
     }
+
+    .flow-item {
+        padding-bottom: 80px;
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+
+    .flow-item .item-content {
+        left: 60px;
+        margin-right: 15px;
+    }
+
+    .flow-item:nth-child(even) .item-content {
+        right: unset;
+        left: 60px;
+        text-align: left;
+    }
+
+    .item-circle {
+        transform: translateX(-12px);
+    }
 }
