@@ -76,4 +76,22 @@
     #mobile-menu-trigger:checked~.header-row .mobile-menu-switch span:last-child {
         transform: rotate(-45deg) translate(2px, -4px);
     }
+
+    .p-1 .page-row {
+        flex-direction: column;
+    }
+
+    .p-1 .page-row>div {
+        width: 100%;
+    }
+
+    .p-1 .page-row .left-side::after {
+        top: unset;
+        right: unset;
+        bottom: 0;
+        left: 20px;
+        border-bottom: 3px dashed #fff;
+        height: 3px;
+        width: calc(100% - 40px);
+    }
 }
