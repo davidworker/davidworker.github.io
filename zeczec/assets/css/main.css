@@ -1,6 +1,7 @@
 :root {
     --header-h: 70px;
     --header-bg: rgb(255, 255, 255);
+    --header-border-color: #ececec;
 }
 
 html,
@@ -9,10 +10,14 @@ body {
     font-size: 16px;
 }
 
+img {
+    max-width: 100%;
+}
+
 .header {
     height: var(--header-h);
     background-color: var(--header-bg);
-    border-bottom: 2px solid #585858;
+    border-bottom: 2px solid var(--header-border-color);
 }
 
 .header-wrap {
@@ -20,6 +25,15 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+.header-logo {
+    border-right: 2px solid var(--header-border-color);
+    text-align: center;
+}
+
+.header-logo img {
+    max-width: 70%;
 }
 
 .header-menu {
@@ -53,4 +67,21 @@ body {
 .menu-button-wrap a:hover,
 .menu-button-wrap a.active {
     color: rgb(25, 108, 202);
+}
+
+.proudct-information {
+    margin: 20px auto;
+}
+
+.product-information-wrap {
+    display: flex;
+
+}
+
+.product-information-video {
+    flex: 2;
+}
+
+.product-information-text {
+    flex: 1;
 }
