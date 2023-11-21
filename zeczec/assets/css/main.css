@@ -84,4 +84,24 @@ img {
 
 .product-information-text {
     flex: 1;
+    padding: 0 10px;
+}
+
+.category-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.category-nav li {
+    position: relative;
+}
+
+.category-nav li::after {
+    content: '\\';
+    position: absolute;
+    right: -14px;
+}
+
+.category-nav li:last-child::after {
+    display: none;
 }
