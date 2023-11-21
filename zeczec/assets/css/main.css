@@ -1,0 +1,56 @@
+:root {
+    --header-h: 70px;
+    --header-bg: rgb(255, 255, 255);
+}
+
+html,
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+}
+
+.header {
+    height: var(--header-h);
+    background-color: var(--header-bg);
+    border-bottom: 2px solid #585858;
+}
+
+.header-wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-menu {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.header-menu-item ul {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-button-wrap {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-button-wrap a {
+    padding: 5px 10px;
+    background-color: #eeeeee;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.menu-button-wrap a:hover,
+.menu-button-wrap a.active {
+    color: rgb(25, 108, 202);
+}
