@@ -120,6 +120,7 @@ img {
 .project-process {
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 .goal-percentage {
@@ -131,4 +132,34 @@ img {
     border: 2px solid #09aa17;
     border-radius: 1000px;
     font-size: 0.9rem;
+}
+
+.project-goal {
+    font-size: 0.9rem;
+    color: #7a7a7a;
+}
+
+.project-current {
+    font-size: 1.2rem;
+}
+
+.project-count {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.9rem;
+}
+
+.process-info {
+    flex: 1;
+}
+
+.project-count-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.project-count-item>span:last-child {
+    color: #09aa17;
 }
