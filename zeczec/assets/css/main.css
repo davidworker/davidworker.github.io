@@ -97,11 +97,38 @@ img {
 }
 
 .category-nav li::after {
-    content: '\\';
+    font-family: 'Material Symbols Outlined';
+    content: "\e5cc";
     position: absolute;
-    right: -14px;
+    right: -19px;
+    top: 2px;
 }
 
 .category-nav li:last-child::after {
     display: none;
+}
+
+.author-name {
+    color: rgb(9, 133, 9);
+}
+
+.product-name {
+    font-size: 1.3rem;
+    margin: 20px auto;
+}
+
+.project-process {
+    display: flex;
+    gap: 20px;
+}
+
+.goal-percentage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #09aa17;
+    border-radius: 1000px;
+    font-size: 0.9rem;
 }
