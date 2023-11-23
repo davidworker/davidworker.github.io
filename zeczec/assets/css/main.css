@@ -183,3 +183,38 @@ hr.line {
     color: var(--second-color);
     font-size: 0.8rem;
 }
+
+.share-item {
+    color: #666666;
+    font-size: 0.8rem;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.send-message {
+    padding: 5px;
+    border: 1px solid var(--second-color);
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    border-radius: 2px;
+}
+
+.share-item .material-symbols-outlined {
+    font-size: 16px;
+}
+
+.share-item img {
+    max-width: 30px;
+}
+
+.copy-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--second-color);
+    border-radius: 999px;
+}
