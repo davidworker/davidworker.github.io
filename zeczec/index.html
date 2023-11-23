@@ -160,4 +160,28 @@
     </div>
 </body>
 
+<script>
+    let tabs = document.querySelector('.tabs');
+    tabs.addEventListener('click', (e) => {
+        e.preventDefault();
+        let el = e.target;
+
+        if (el.tagName == 'A') {
+            el = el.parentNode;
+        }
+
+        if (el.tagName == 'LI') {
+            resetTabsActive();
+            el.classList.add('active')
+        }
+    });
+
+    function resetTabsActive() {
+        let items = tabs.querySelectorAll('li');
+        items.forEach(el => {
+            el.classList.remove('active');
+        })
+    }
+</script>
+
 </html>

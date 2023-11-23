@@ -135,6 +135,7 @@ img {
     border: 2px solid #09aa17;
     border-radius: 1000px;
     font-size: 0.9rem;
+    box-shadow: 0 0 1px 1px inset #ababab;
 }
 
 .project-goal {
@@ -254,7 +255,6 @@ hr.line {
     transition: 0.3s;
 }
 
-.page-tab .tabs li:hover::after,
 .page-tab .tabs li.active::after {
     width: calc(100% + 8px);
 }
