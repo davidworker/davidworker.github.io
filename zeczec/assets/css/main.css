@@ -259,6 +259,13 @@ hr.line {
     width: calc(100% + 8px);
 }
 
+.page-tab .tabs li a::after {
+    content: attr(data-count);
+    font-size: 0.8rem;
+    padding-left: 8px;
+    font-weight: 600;
+}
+
 
 .main-nav-wrap .donate-wrap {
     flex: 1;
