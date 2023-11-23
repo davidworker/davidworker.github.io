@@ -84,7 +84,7 @@ img {
 
 .product-information-text {
     flex: 1;
-    padding: 0 10px;
+    padding: 0 30px;
 }
 
 .category-nav {
@@ -162,4 +162,11 @@ img {
 
 .project-count-item>span:last-child {
     color: #09aa17;
+}
+
+.project-description {
+    font-size: 0.9rem;
+    line-height: 26px;
+    margin: 15px auto;
+    text-align: justify;
 }
