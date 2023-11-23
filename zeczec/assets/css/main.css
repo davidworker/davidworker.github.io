@@ -236,7 +236,27 @@ hr.line {
 
 .page-tab .tabs {
     display: flex;
-    gap: 15px;
+    gap: 25px;
+}
+
+.page-tab .tabs li {
+    position: relative;
+}
+
+.page-tab .tabs li::after {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    left: -4px;
+    width: 0;
+    background: #4cc764;
+    height: 2px;
+    transition: 0.3s;
+}
+
+.page-tab .tabs li:hover::after,
+.page-tab .tabs li.active::after {
+    width: calc(100% + 8px);
 }
 
 
