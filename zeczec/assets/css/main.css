@@ -2,6 +2,7 @@
     --header-h: 70px;
     --header-bg: rgb(255, 255, 255);
     --header-border-color: #ececec;
+    --second-color: #a8a8a8;
 }
 
 html,
@@ -90,6 +91,8 @@ img {
 .category-nav {
     display: flex;
     gap: 20px;
+    color: var(--second-color);
+    font-size: 0.9rem;
 }
 
 .category-nav li {
@@ -169,4 +172,14 @@ img {
     line-height: 26px;
     margin: 15px auto;
     text-align: justify;
+}
+
+hr.line {
+    border-color: var(--header-border-color);
+}
+
+.project-run-range {
+    margin: 15px auto;
+    color: var(--second-color);
+    font-size: 0.8rem;
 }
