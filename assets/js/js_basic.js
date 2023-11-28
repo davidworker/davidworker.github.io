@@ -59,3 +59,41 @@ function add(num1, num2) {
 
 console.log(add(1, 1));
 console.log(add('1', 1));
+
+
+let students = [1, 2, 3, 4]
+console.table(students)
+
+students.push(5);
+console.table(students)
+
+students.unshift('FFF');
+console.table(students)
+
+console.table(students.join(','));
+
+let index = students.indexOf('FFF');
+console.log(index);
+
+students.splice(2, 1)
+console.table(students)
+
+
+let person = {
+    name: 'David Lin',
+    age: 18
+}
+
+console.table(person);
+
+person.name = 'John';
+console.table(person);
+
+add = 100
+// console.log(add(1, 10));
+
+let bbb = function () {
+    return 'bbb'
+}
+
+console.log(bbb());
