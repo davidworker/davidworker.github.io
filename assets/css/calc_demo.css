@@ -1,0 +1,43 @@
+.form-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px auto;
+}
+
+.form-item input,
+.form-item select {
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    border: 0;
+    outline: 0;
+    border-radius: 4px;
+    box-shadow: 0 0 1px 1px #1dafc9 inset;
+    font-size: 1.4rem;
+}
+
+.form-item select {
+    padding: 0 15px;
+}
+
+.fn {
+    text-align: right;
+}
+
+.btn {
+    border: 0;
+    outline: 0;
+    background: #1650a7;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#response {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid #c9a11d;
+    min-height: 100px;
+}
