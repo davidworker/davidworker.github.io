@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc Demo</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/calc_demo.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>四則運算互動</h1>
+        <div>
+            <label for="calc-num-1">數字 1</label>
+            <input type="number" id="calc-num-1">
+        </div>
+        <div>
+            <label for="calc-type">運算方式</label>
+            <select id="calc-type">
+                <option value="">請選擇運算方式</option>
+                <option value="add">加法</option>
+                <option value="sub">減法</option>
+                <option value="mul">乘法</option>
+                <option value="div">除法</option>
+            </select>
+        </div>
+        <div>
+            <label for="calc-num-2">數字 2</label>
+            <input type="number" id="calc-num-2">
+        </div>
+        <div>
+            <button id="calc-btn">計算</button>
+        </div>
+        <div id="response"></div>
+    </div>
+</body>
+<script src="assets/js/calc_demo.js"></script>
+
+</html>
