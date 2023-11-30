@@ -10,7 +10,7 @@ btn.addEventListener('click', (e) => {
     let tid = type.value;
 
     if (isNaN(n1) || isNaN(n2) || !tid) {
-        return;
+        return; // void
     }
 
     let symbol = '';
