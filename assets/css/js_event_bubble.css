@@ -1,0 +1,29 @@
+#menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#menu li {
+    background: #a51e1e;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#menu li:hover {
+    background: blue;
+}
+
+
+.btn {
+    border: 0;
+    outline: 0;
+    background: #1650a7;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
