@@ -11,7 +11,8 @@ elAddBtn.addEventListener('click', (e) => {
 
     elItem.innerHTML += `<li>
                             <div><input type="checkbox"></div>
-                            <div>${value}</div>`
+                            <div>${value}</div>
+                        </li>`
 
     elInput.value = '';
     elInput.focus();
