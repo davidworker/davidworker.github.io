@@ -9,6 +9,18 @@ const initEnd = () => {
     return end;
 }
 
+const updateHTML = (days, hours, minutes, seconds) => {
+    let elDays = document.querySelector('#countdown-days');
+    let elHours = document.querySelector('#countdown-hours');
+    let elMinutes = document.querySelector('#countdown-minutes');
+    let elSeconds = document.querySelector('#countdown-seconds');
+
+    elDays.innerHTML = days;
+    elHours.innerHTML = hours;
+    elMinutes.innerHTML = minutes;
+    elSeconds.innerHTML = seconds;
+}
+
 const calc = (end) => {
     let current = new Date().getTime();
     let diff = (end - current) / 1000
@@ -45,7 +57,7 @@ const calc = (end) => {
         seconds = '0' + seconds
     }
 
-    console.log(days, hours, minutes, seconds);
+    updateHTML(days, hours, minutes, seconds);
 }
 
 let end = initEnd();
