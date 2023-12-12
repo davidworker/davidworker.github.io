@@ -10,3 +10,5 @@ class LocalStorage {
         console.log(`Hi, ${this.#uid}`);
     }
 }
+
+export { LocalStorage }
