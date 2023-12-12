@@ -10,8 +10,8 @@ const addTodo = () => {
     }
 
     elItem.innerHTML += `<li>
-                            <div><input type="checkbox"></div>
-                            <div>${value}</div>
+                            <input type="checkbox">
+                            <span>${value}</span>
                         </li>`
 
     elInput.value = '';
@@ -26,5 +26,26 @@ elAddBtn.addEventListener('click', (e) => {
 elInput.addEventListener('keyup', (e) => {
     if (e.key.toString().toUpperCase() == 'ENTER') {
         addTodo();
+    }
+})
+
+elItem.addEventListener('click', (e) => {
+    let el = e.target;
+    let tag = el.tagName.toString().toUpperCase();
+    let isCheckbox = false;
+
+    if (tag == 'INPUT') {
+        isCheckbox = true;
+    }
+
+    if (tag == 'SPAN' || tag == 'INPUT') {
+        el = el.parentNode
+    }
+
+    if (el.tagName.toString().toUpperCase() == 'LI') {
+        let checkbox = el.querySelector('input[type=checkbox]');
+        if (!isCheckbox) {
+            checkbox.checked = !checkbox.checked;
+        }
     }
 })
