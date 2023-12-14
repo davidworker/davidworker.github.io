@@ -16,11 +16,21 @@ class TODO {
         if (text) {
             this.#items.push({ checked: false, text: text })
         }
+        this.write();
+    }
+
+    write() {
+        this.#storage.write('todo', this.#items)
+    }
+
+    read() {
+        return this.#storage.read('todo');
     }
 
     checkedToggle(index) {
         if (this.#items[index]) {
             this.#items[index].checked = !this.#items[index].checked
+            this.write();
             this.render();
         }
     }
@@ -39,6 +49,8 @@ class TODO {
     }
 
     init() {
+        this.#items = this.read();
+        this.render();
         this.#el.addEventListener('click', (e) => {
             let el = e.target;
             let tag = el.tagName.toString().toUpperCase();
