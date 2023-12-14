@@ -24,7 +24,7 @@ class TODO {
     }
 
     read() {
-        return this.#storage.read('todo');
+        return this.#storage.read('todo', []);
     }
 
     checkedToggle(index) {
