@@ -72,3 +72,17 @@
 #todo-item>li>input[type=checkbox]:checked+span {
     text-decoration: line-through;
 }
+
+.tabs {
+    display: none;
+}
+
+.tabs.active {
+    display: block;
+}
+
+.fn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

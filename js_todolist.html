@@ -12,19 +12,34 @@
 
 <body>
     <div class="container">
-        <h1>TODO LIST</h1>
-        <div class="todo-input">
-            <input type="text" id="todo-in">
-            <button id="todo-add-btn">新增</button>
-        </div>
-        <hr>
-        <div class="todo-item-wrap">
-            <ul id="todo-item">
-                <!-- <li>
+        <div class="tabs" id="todo-app">
+            <div class="fn">
+                <h1>TODO LIST</h1>
+                <div>
+                    <a href="#" id="change-uid-btn">登出</a>
+                </div>
+            </div>
+            <div class="todo-input">
+                <input type="text" id="todo-in">
+                <button id="todo-add-btn">新增</button>
+            </div>
+            <hr>
+            <div class="todo-item-wrap">
+                <ul id="todo-item">
+                    <!-- <li>
                     <input type="checkbox">
                     <span>TEXT</span>
                 </li> -->
-            </ul>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tabs" id="uid-app">
+            <h1>請輸入 UID</h1>
+            <div class="todo-input">
+                <input type="text" id="todo-uid">
+                <button id="todo-uid-btn">確認</button>
+            </div>
         </div>
     </div>
 </body>
