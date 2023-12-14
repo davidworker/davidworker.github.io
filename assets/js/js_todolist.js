@@ -59,4 +59,34 @@ if (uid) {
 }
 
 
+const doGet = () => {
+    let request = new XMLHttpRequest()
 
+    request.addEventListener('load', () => {
+        console.log('loaded')
+        console.log(request.responseText)
+    })
+
+    request.open('GET', 'https://book.niceinfos.com/frontend/api/?action=sleep')
+    request.send()
+    console.log('doGet run.')
+}
+
+// doGet();
+
+const doFetch = () => {
+    let api = 'https://book.niceinfos.com/frontend/api/?action=sleep'
+
+    fetch(api)
+        .then((response) => {
+            return response.text()
+            // return response.json()
+        })
+        .then((data) => {
+            console.log(data)
+        })
+
+    console.log('doFetch run.')
+}
+
+doFetch();
