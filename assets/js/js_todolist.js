@@ -146,9 +146,17 @@ const doUploadFile = (file) => {
 let elUpload = {
     file: document.querySelector('#upload-file'),
     button: document.querySelector('#do-upload'),
+    preview: document.querySelector('#preview')
 }
 
 elUpload.button.addEventListener('click', (e) => {
     let file = elUpload.file.files[0]
+
+    let reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+        console.log(reader.result);
+        elUpload.preview.src = reader.result;
+    }
     doUploadFile(file)
 })
