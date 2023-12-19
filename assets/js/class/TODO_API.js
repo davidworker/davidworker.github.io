@@ -1,6 +1,21 @@
 class TODO_API {
-    static update(uid, data = []) {
+    static async update(uid, data = []) {
+        let api = 'https://book.niceinfos.com/frontend/api/';
 
+        let params = {
+            action: 'todo',
+            uid: uid,
+            data: data
+        }
+
+        let options = {
+            method: 'POST',
+            body: JSON.stringify(params)
+        }
+
+        let response = await fetch(api, options)
+        let json = await response.json();
+        return json.data;
     }
 
     static async get(uid) {
@@ -8,6 +23,13 @@ class TODO_API {
         let response = await fetch(api);
         let json = await response.json();
         return json.data;
+
+        // let text = await response.text();
+        // try {
+        //     return JSON.parse(text);
+        // } catch (e) {
+        //     return {};
+        // }
 
         // fetch(api).then(response => {
         //     return response.json()

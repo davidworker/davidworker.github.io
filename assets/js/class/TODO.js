@@ -16,14 +16,15 @@ class TODO {
     }
 
     add(text) {
+        console.log(text);
         if (text) {
             this.#items.push({ checked: false, text: text })
         }
         this.write();
     }
 
-    write() {
-        this.#storage.write('todo', this.#items)
+    async write() {
+        await TODO_API.update(this.#uid, this.#items);
     }
 
     async read() {
