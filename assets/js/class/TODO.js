@@ -1,14 +1,17 @@
 import { LocalStorage } from "./LocalStorage.js";
+import { TODO_API } from './TODO_API.js'
 
 class TODO {
     #items
     #el
     #storage
+    #uid
 
     constructor(el, uid = 'todo') {
         this.#items = [];
         this.#el = el;
         this.#storage = new LocalStorage(uid);
+        this.#uid = uid;
         this.init();
     }
 
@@ -23,8 +26,9 @@ class TODO {
         this.#storage.write('todo', this.#items)
     }
 
-    read() {
-        return this.#storage.read('todo', []);
+    async read() {
+        return await TODO_API.get(this.#uid)
+        // return this.#storage.read('todo', []);
     }
 
     checkedToggle(index) {
@@ -64,9 +68,6 @@ class TODO {
                 this.checkedToggle(index);
             }
         })
-
-
-
     }
 
     dragAndDrop() {
