@@ -7,7 +7,14 @@ class TODO_API {
         let api = `https://book.niceinfos.com/frontend/api/?action=todo&uid=${uid}`
         let response = await fetch(api);
         let json = await response.json();
-        return json;
+        return json.data;
+
+        // fetch(api).then(response => {
+        //     return response.json()
+        // }).then(json => {
+        //     return json;
+        // })
+
     }
 }
 

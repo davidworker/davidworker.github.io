@@ -28,7 +28,6 @@ class TODO {
 
     async read() {
         return await TODO_API.get(this.#uid)
-        // return this.#storage.read('todo', []);
     }
 
     checkedToggle(index) {
@@ -52,8 +51,8 @@ class TODO {
         this.#el.innerHTML = html;
     }
 
-    init() {
-        this.#items = this.read();
+    async init() {
+        this.#items = await this.read();
         this.render();
         this.#el.addEventListener('click', (e) => {
             let el = e.target;
