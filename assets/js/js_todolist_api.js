@@ -57,3 +57,7 @@ if (uid) {
         }
     })
 }
+
+let r = await fetch('https://soa.tainan.gov.tw/Api/Service/Get/6c5be14e-25da-4b58-aa35-e0f6513537ae')
+let json = await r.json();
+console.log(json.data);
