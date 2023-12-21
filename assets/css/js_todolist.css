@@ -39,6 +39,16 @@
     margin-top: 10px;
 }
 
+.todo-input button.linker {
+    background: transparent;
+    color: #636363;
+    width: auto;
+    height: auto;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #636363;
+    border-radius: 0;
+}
+
 /* .todo-item {
     display: flex;
     align-items: center;

@@ -64,15 +64,25 @@ const authed = (user) => {
 
 const unauthed = () => {
     uidApp.classList.add('active');
+    let elAccount = document.querySelector('#todo-account');
+    let elPassword = document.querySelector('#todo-password');
 
-    let elUid = document.querySelector('#todo-uid');
-    let elBtn = document.querySelector('#todo-uid-btn');
-    elBtn.addEventListener('click', (e) => {
-        let value = elUid.value;
-        if (value) {
-            location.reload();
-        }
+    let elSignInBtn = document.querySelector('#todo-signin-btn')
+    elSignInBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        let account = elAccount.value;
+        let password = elPassword.value;
+        console.log(account, password)
     })
+
+    // let elUid = document.querySelector('#todo-uid');
+    // let elBtn = document.querySelector('#todo-uid-btn');
+    // elBtn.addEventListener('click', (e) => {
+    //     let value = elUid.value;
+    //     if (value) {
+    //         location.reload();
+    //     }
+    // })
 }
 
 auth.onChange(authed, unauthed);
