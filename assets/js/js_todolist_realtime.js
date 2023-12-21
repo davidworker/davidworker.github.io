@@ -1,25 +1,23 @@
 import { TodoRealtime } from './class/TodoRealtime.js';
-import { UID } from './class/UID.js';
+// import { UID } from './class/UID.js';
 import { App } from './Firebase/App.js';
 import { Auth } from './Firebase/Auth.js';
 
 const app = await App.init();
 const auth = new Auth(app);
 
+let todoApp = document.querySelector('#todo-app');
+let uidApp = document.querySelector('#uid-app');
+
 let email = 'kindping@gmail.com'
 let password = '12345678'
 
 // let user = await auth.register(email, password);
-let user = await auth.signIn(email, password);
-console.log(user);
+// let user = await auth.signIn(email, password);
+// console.log(user);
 
-
-
-let todoApp = document.querySelector('#todo-app');
-let uidApp = document.querySelector('#uid-app');
-let uid = UID.read();
-
-if (uid) {
+const authed = (user) => {
+    let uid = user.uid;
     todoApp.classList.add('active');
     // TODO Application.
     let elInput = document.querySelector('#todo-in');
@@ -53,16 +51,18 @@ if (uid) {
         }
     })
 
-    elChangeUid.addEventListener('click', (e) => {
+    elChangeUid.addEventListener('click', async (e) => {
         e.preventDefault();
-        UID.clear();
+        await auth.signOut()
         location.reload();
     })
 
 
     let elCurentUid = document.querySelector('#current-uid');
     elCurentUid.innerHTML = uid
-} else {
+}
+
+const unauthed = () => {
     uidApp.classList.add('active');
 
     let elUid = document.querySelector('#todo-uid');
@@ -70,8 +70,9 @@ if (uid) {
     elBtn.addEventListener('click', (e) => {
         let value = elUid.value;
         if (value) {
-            UID.write(value);
             location.reload();
         }
     })
 }
+
+auth.onChange(authed, unauthed);
