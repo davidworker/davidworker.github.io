@@ -1,5 +1,19 @@
 import { TodoRealtime } from './class/TodoRealtime.js';
 import { UID } from './class/UID.js';
+import { App } from './Firebase/App.js';
+import { Auth } from './Firebase/Auth.js';
+
+const app = await App.init();
+const auth = new Auth(app);
+
+let email = 'kindping@gmail.com'
+let password = '12345678'
+
+// let user = await auth.register(email, password);
+let user = await auth.signIn(email, password);
+console.log(user);
+
+
 
 let todoApp = document.querySelector('#todo-app');
 let uidApp = document.querySelector('#uid-app');
