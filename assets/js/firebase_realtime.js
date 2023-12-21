@@ -14,3 +14,6 @@ const onChange = (data) => {
 }
 
 database.listen('david', onChange);
+
+
+database.insert('test', 'aaaa');

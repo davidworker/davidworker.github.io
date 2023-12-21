@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO List Realtime</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/js_todolist.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="tabs" id="todo-app">
+            <div class="fn">
+                <h1>TODO LIST</h1>
+                <div>
+                    <a href="#" id="change-uid-btn">登出</a>
+                </div>
+            </div>
+            <div>現在登入帳號: <span id="current-uid"></span></div>
+            <div class="todo-input">
+                <input type="text" id="todo-in">
+                <button id="todo-add-btn">新增</button>
+            </div>
+            <hr>
+            <div class="todo-item-wrap">
+                <ul id="todo-item">
+                    <!-- <li>
+                    <input type="checkbox">
+                    <span>TEXT</span>
+                </li> -->
+                </ul>
+            </div>
+        </div>
+
+        <div class="tabs" id="uid-app">
+            <h1>請輸入 UID</h1>
+            <div class="todo-input">
+                <input type="text" id="todo-uid">
+                <button id="todo-uid-btn">確認</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="assets/js/js_todolist_realtime.js"></script>
+
+</html>
