@@ -8,15 +8,22 @@ const auth = new Auth(app);
 
 let todoApp = document.querySelector('#todo-app');
 let uidApp = document.querySelector('#uid-app');
-
-let email = 'kindping@gmail.com'
-let password = '12345678'
+let isRegisterMode = false;
 
 // let user = await auth.register(email, password);
 // let user = await auth.signIn(email, password);
 // console.log(user);
 
-const authed = (user) => {
+const authed = async (user) => {
+    if (isRegisterMode) {
+        await Swal.fire({
+            title: '註冊成功',
+            html: `已註冊，請登入`,
+            icon: 'success'
+        })
+        location.reload();
+        return;
+    }
     let uid = user.uid;
     todoApp.classList.add('active');
     // TODO Application.
@@ -96,6 +103,8 @@ const unauthed = () => {
             return
         }
 
+        isRegisterMode = false;
+
         let user = await auth.signIn(account, password);
         if (user) {
             uidApp.classList.remove('active');
@@ -108,6 +117,52 @@ const unauthed = () => {
             Swal.fire({
                 title: '登入失敗',
                 html: '帳號密碼錯誤',
+                icon: 'error'
+            })
+        }
+    })
+
+    let elRegisterBtn = document.querySelector('#todo-register-btn')
+
+    elRegisterBtn.addEventListener('click', async (e) => {
+        e.preventDefault();
+
+        let account = elAccount.value;
+        let password = elPassword.value;
+        if (!account) {
+            await Swal.fire({
+                title: '註冊失敗',
+                html: '帳號未填寫',
+                icon: 'error'
+            })
+            setTimeout(() => {
+                elAccount.focus();
+            }, 500)
+            return
+        }
+
+        if (!password) {
+            await Swal.fire({
+                title: '註冊失敗',
+                html: '密碼未填寫',
+                icon: 'error'
+            })
+            setTimeout(() => {
+                elPassword.focus();
+            }, 500)
+            return
+        }
+
+        isRegisterMode = true;
+        let user = await auth.register(account, password);
+        if (user) {
+            await auth.signOut();
+            elAccount.value = ''
+            elPassword.value = ''
+        } else {
+            Swal.fire({
+                title: '註冊失敗',
+                html: '請稍後再試',
                 icon: 'error'
             })
         }
