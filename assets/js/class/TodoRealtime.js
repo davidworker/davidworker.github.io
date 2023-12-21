@@ -15,7 +15,7 @@ class TodoRealtime {
     }
 
     add(text) {
-        console.log(text);
+
         if (text) {
             this.#items.push({ checked: false, text: text })
         }

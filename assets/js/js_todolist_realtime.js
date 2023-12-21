@@ -68,11 +68,49 @@ const unauthed = () => {
     let elPassword = document.querySelector('#todo-password');
 
     let elSignInBtn = document.querySelector('#todo-signin-btn')
-    elSignInBtn.addEventListener('click', (e) => {
+    elSignInBtn.addEventListener('click', async (e) => {
         e.preventDefault();
         let account = elAccount.value;
         let password = elPassword.value;
-        console.log(account, password)
+        if (!account) {
+            await Swal.fire({
+                title: '登入失敗',
+                html: '帳號未填寫',
+                icon: 'error'
+            })
+            setTimeout(() => {
+                elAccount.focus();
+            }, 500)
+            return
+        }
+
+        if (!password) {
+            await Swal.fire({
+                title: '登入失敗',
+                html: '密碼未填寫',
+                icon: 'error'
+            })
+            setTimeout(() => {
+                elPassword.focus();
+            }, 500)
+            return
+        }
+
+        let user = await auth.signIn(account, password);
+        if (user) {
+            uidApp.classList.remove('active');
+            Swal.fire({
+                title: '登入成功',
+                html: `已登入: ${account}`,
+                icon: 'success'
+            })
+        } else {
+            Swal.fire({
+                title: '登入失敗',
+                html: '帳號密碼錯誤',
+                icon: 'error'
+            })
+        }
     })
 
     // let elUid = document.querySelector('#todo-uid');
