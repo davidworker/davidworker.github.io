@@ -17,6 +17,17 @@
         <div>
             <input type="text" id="account" value="123">
         </div>
+        <div>
+            <input type="checkbox" id="dd">
+        </div>
+
+        <div>
+            <button id="cc">change input style</button>
+        </div>
+
+        <div>
+            <button id="ddd">dd change</button>
+        </div>
 
         <ul>
             <li class="student">1</li>
@@ -63,6 +74,26 @@
             console.log('Origin')
         })
     })
+
+
+    let cc = $('#cc');
+    cc.on('click', (e) => {
+        // if (elAccount.hasClass('active')) {
+        //     elAccount.removeClass('active');
+        // } else {
+        //     elAccount.addClass('active')
+        // }
+
+        elAccount.toggleClass('active');
+
+    })
+
+    let ddd = $('#ddd')
+    let dd = $('#dd')
+
+    ddd.on('click', (e) => {
+        console.log(dd.prop('checked'))
+    });
 </script>
 
 </html>
