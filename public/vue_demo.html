@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Demo</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <style>
+        *,
+        *::after,
+        *::before {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .form-item {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            max-width: 1000px;
+            height: 100%;
+            margin: auto;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id="app">
+        <div class="container">
+            <div>你現在輸入的帳號為: <span>{{ account }}</span></div>
+            <div class="form-item">
+                <label for="">帳號</label>
+                <input type="text" v-model="account" />
+            </div>
+            <div class="form-item">
+                <button @click="send">送出</button>
+            </div>
+        </div>
+    </div> -->
+
+    <div id="app">
+        <div class="container">
+            <div>你現在輸入的帳號為: <span id="display-account"></span></div>
+            <div class="form-item">
+                <label for="">帳號</label>
+                <input type="text" id="account" />
+            </div>
+            <div class="form-item">
+                <button @click="send" id="send-btn">送出</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // Vue.createApp({
+    //     // Model
+    //     data() {
+    //         return {
+    //             account: '',
+    //         }
+    //     },
+    //     methods: {
+    //         send() {
+    //             console.log(`account: ${this.account} will be send.`)
+    //         },
+    //     },
+    //     mounted() {
+    //         console.log('app inited.')
+    //     },
+    // }).mount('#app')
+
+    let elAccount = document.querySelector('#account')
+    let elDisAccount = document.querySelector('#display-account')
+    let elSendBtn = document.querySelector('#send-btn')
+    elSendBtn.addEventListener('click', () => {
+        let account = elAccount.value;
+        console.log(`account: ${account} will be send.`)
+    })
+
+    elAccount.addEventListener('keyup', () => {
+        elDisAccount.innerHTML = elAccount.value
+    })
+</script>
+
+</html>
