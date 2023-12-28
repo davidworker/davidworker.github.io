@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jQuery Demo</title>
     <link rel="stylesheet" href="assets/css/reset.css">
-    <!-- <script src="assets/js/jquery.min.js"></script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
 </head>
 
 <body>
@@ -16,5 +15,21 @@
         <h1>jQuery Demo</h1>
     </div>
 </body>
+<script>
+    let $ = 'JSON';
+
+
+
+    (($) => {
+        console.log($);
+    })(jQuery);
+
+    const init = ($) => {
+        console.log($);
+    }
+    init(jQuery);
+
+    console.log($, jQuery)
+</script>
 
 </html>
