@@ -48,6 +48,21 @@
         student = $(student);
         console.log(student.html())
     })
+
+    let first = elStudents.eq(0);
+    console.log(first);
+    console.log(first[0])
+
+    elStudents.on('click', (e) => {
+        console.log(e.target.innerHTML);
+    })
+
+    let elStudentsDOM = document.querySelectorAll('.student')
+    elStudentsDOM.forEach(dom => {
+        dom.addEventListener('click', (e) => {
+            console.log('Origin')
+        })
+    })
 </script>
 
 </html>
