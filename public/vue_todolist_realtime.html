@@ -15,7 +15,7 @@
 <body>
     <div class="container">
         <div id="todo-app">
-            <div class="tabs">
+            <div class="tabs" v-show="isAuth">
                 <div class="fn">
                     <h1>TODO LIST</h1>
                     <div>
@@ -38,7 +38,7 @@
                 </div>
             </div>
 
-            <div class="tabs">
+            <div class="tabs" v-show="!isAuth">
                 <h1>請輸入帳號</h1>
                 <div class="todo-input">
                     <input type="email" id="todo-account" placeholder="Email">
