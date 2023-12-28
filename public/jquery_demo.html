@@ -13,23 +13,15 @@
 <body>
     <div class="container">
         <h1>jQuery Demo</h1>
+        <div id="display-account">Account Information.</div>
     </div>
 </body>
 <script>
-    let $ = 'JSON';
+    let elDisAccountDOM = document.querySelector('#display-account');
+    let elDisAccount = $('#display-account');
 
-
-
-    (($) => {
-        console.log($);
-    })(jQuery);
-
-    const init = ($) => {
-        console.log($);
-    }
-    init(jQuery);
-
-    console.log($, jQuery)
+    console.log(elDisAccount.html())
+    console.log(elDisAccountDOM.innerHTML)
 </script>
 
 </html>
