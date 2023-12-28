@@ -14,6 +14,9 @@
     <div class="container">
         <h1>jQuery Demo</h1>
         <div id="display-account">Account Information.</div>
+        <div>
+            <input type="text" id="account" value="123">
+        </div>
     </div>
 </body>
 <script>
@@ -22,6 +25,14 @@
 
     console.log(elDisAccount.html())
     console.log(elDisAccountDOM.innerHTML)
+
+    let elAccountDOM = document.querySelector('#account');
+    let elAccount = $('#account');
+
+    console.log(elAccount.val())
+    console.log(elAccountDOM.value)
+
+    elAccount.val('456')
 </script>
 
 </html>
