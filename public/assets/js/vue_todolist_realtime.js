@@ -2,6 +2,10 @@ import { App } from './Firebase/App.js';
 import { Auth } from './Firebase/Auth.js';
 import { Database } from './Firebase/Database.js'
 
+const app = await App.init();
+const auth = new Auth(app);
+const db = new Database(app);
+
 Vue.createApp({
     data() {
         return {
@@ -10,10 +14,7 @@ Vue.createApp({
                 account: '',
                 secret: '',
             },
-            firebase: {
-                auth: '',
-                database: ''
-            }
+            user: {},
         }
     },
     methods: {
@@ -45,17 +46,15 @@ Vue.createApp({
                 return
             }
 
-
-            // isRegisterMode = false;
-
-            let user = await this.firebase.auth.signIn(account, password);
+            let user = await auth.signIn(account, password);
             if (user) {
-                uidApp.classList.remove('active');
-                Swal.fire({
+                await Swal.fire({
                     title: '登入成功',
                     html: `已登入: ${account}`,
                     icon: 'success'
                 })
+                this.user = user;
+                this.isAuth = true;
             } else {
                 Swal.fire({
                     title: '登入失敗',
@@ -65,10 +64,10 @@ Vue.createApp({
             }
         }
     },
-    async mounted() {
-        const app = await App.init();
-        this.firebase.auth = new Auth(app);
-        this.firebase.database = new Database(app);
+    mounted() {
+        // const app = await App.init();
+        // this.firebase.auth = new Auth(app);
+        // this.firebase.database = new Database(app);
         console.log('todo app is mounted.')
     }
 }).mount('#todo-app')
