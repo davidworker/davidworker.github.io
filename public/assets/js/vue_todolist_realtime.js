@@ -1,3 +1,7 @@
+import { App } from './Firebase/App.js';
+import { Auth } from './Firebase/Auth.js';
+import { Database } from './Firebase/Database.js'
+
 Vue.createApp({
     data() {
         return {
@@ -5,30 +9,29 @@ Vue.createApp({
             auth: {
                 account: '',
                 secret: '',
+            },
+            firebase: {
+                auth: '',
+                database: ''
             }
         }
     },
     methods: {
         async login() {
-            console.log(this.$refs)
-            this.$refs.auth_account.focus();
-            return;
+            let account = this.auth.account
+            let password = this.auth.secret
 
-
-            if (!this.auth.account) {
+            if (!account) {
                 await Swal.fire({
                     title: '登入失敗',
                     html: '帳號未填寫',
                     icon: 'error'
                 })
                 setTimeout(() => {
-                    elAccount.focus();
+                    this.$refs.auth_account.focus();
                 }, 500)
                 return
             }
-
-
-            return;
 
             if (!password) {
                 await Swal.fire({
@@ -37,14 +40,15 @@ Vue.createApp({
                     icon: 'error'
                 })
                 setTimeout(() => {
-                    elPassword.focus();
+                    this.$refs.auth_secret.focus();
                 }, 500)
                 return
             }
 
-            isRegisterMode = false;
 
-            let user = await auth.signIn(account, password);
+            // isRegisterMode = false;
+
+            let user = await this.firebase.auth.signIn(account, password);
             if (user) {
                 uidApp.classList.remove('active');
                 Swal.fire({
@@ -61,7 +65,10 @@ Vue.createApp({
             }
         }
     },
-    mounted() {
+    async mounted() {
+        const app = await App.init();
+        this.firebase.auth = new Auth(app);
+        this.firebase.database = new Database(app);
         console.log('todo app is mounted.')
     }
 }).mount('#todo-app')

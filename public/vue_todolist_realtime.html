@@ -39,13 +39,13 @@
             </div>
 
             <div class="tabs" v-show="!isAuth">
-                <h1>請輸入帳號 {{ auth.account }}</h1>
+                <h1>請輸入帳號</h1>
                 <div class="todo-input">
                     <input type="email" id="todo-account" placeholder="Email" v-model="auth.account" ref="auth_account">
                 </div>
                 <h1>請輸入密碼</h1>
                 <div class="todo-input">
-                    <input type="password" id="todo-password" placeholder="密碼" v-model="auth.secret">
+                    <input type="password" id="todo-password" placeholder="密碼" v-model="auth.secret" ref="auth_secret">
                 </div>
                 <div class="todo-input" style="justify-content: space-between;">
                     <button id="todo-register-btn" class="linker">註冊</button>
