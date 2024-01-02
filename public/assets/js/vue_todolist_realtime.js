@@ -2,6 +2,10 @@ Vue.createApp({
     data() {
         return {
             isAuth: false,
+            auth: {
+                account: 'aaaa',
+                secret: 'bbbb',
+            }
         }
     },
     methods: {},
