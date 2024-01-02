@@ -15,6 +15,10 @@ Vue.createApp({
                 secret: '',
             },
             user: {},
+            todo: {
+                text: '',
+            },
+            items: [],
         }
     },
     methods: {
@@ -124,15 +128,35 @@ Vue.createApp({
             console.log('authed')
             this.user = user;
             this.isAuth = true;
+            db.listen(this.savePath(), (data) => {
+                this.items = data
+            })
         },
         unauthed() {
             console.log('unauthed')
             this.user = {};
             this.isAuth = false;
+        },
+        add() {
+            let value = this.todo.text;
+
+
+            if (value) {
+                return; // void
+            }
+
+            elInput.value = '';
+            this.$refs.todo_text.focus();
+
+            todo.add(value);
+        },
+        savePath() {
+            return `todo/${this.user.uid}`
         }
     },
     mounted() {
         auth.onChange(this.authed, this.unauthed);
+
         console.log('todo app is mounted.')
 
     }

@@ -31,6 +31,7 @@ class TodoRealtime {
         // return await TODO_API.get(this.#uid)
     }
 
+    // 解藕到 vue 版本
     checkedToggle(index) {
         if (this.#items[index]) {
             this.#items[index].checked = !this.#items[index].checked

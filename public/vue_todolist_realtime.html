@@ -24,12 +24,16 @@
                 </div>
                 <div>現在登入帳號: <span id="current-uid">{{ user.uid }}</span></div>
                 <div class="todo-input">
-                    <input type="text" id="todo-in">
-                    <button id="todo-add-btn">新增</button>
+                    <input type="text" id="todo-in" v-mode="todo.text" ref="todo_text">
+                    <button id="todo-add-btn" @click.prevent="add">新增</button>
                 </div>
                 <hr>
                 <div class="todo-item-wrap">
                     <ul id="todo-item">
+                        <li v-for="(item, index) in items">
+                            <input type="checkbox" :checked="item.checked">
+                            <span>{{ item.text }}</span>
+                        </li>
                         <!-- <li>
                     <input type="checkbox">
                     <span>TEXT</span>
