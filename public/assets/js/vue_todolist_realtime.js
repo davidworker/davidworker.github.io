@@ -18,6 +18,10 @@ Vue.createApp({
         }
     },
     methods: {
+        initAuth() {
+            this.auth.account = '';
+            this.auth.secret = '';
+        },
         async login() {
             let account = this.auth.account
             let password = this.auth.secret
@@ -53,10 +57,7 @@ Vue.createApp({
                     html: `已登入: ${account}`,
                     icon: 'success'
                 })
-                this.user = user;
-                this.isAuth = true;
-                this.auth.account = '';
-                this.auth.secret = '';
+                this.initAuth();
             } else {
                 Swal.fire({
                     title: '登入失敗',
@@ -74,13 +75,60 @@ Vue.createApp({
             })
             this.isAuth = false
         },
+        async register() {
+            let account = this.auth.account
+            let password = this.auth.secret
+
+            if (!account) {
+                await Swal.fire({
+                    title: '註冊失敗',
+                    html: '帳號未填寫',
+                    icon: 'error'
+                })
+                setTimeout(() => {
+                    this.$refs.auth_account.focus();
+                }, 500)
+                return
+            }
+
+            if (!password) {
+                await Swal.fire({
+                    title: '註冊失敗',
+                    html: '密碼未填寫',
+                    icon: 'error'
+                })
+                setTimeout(() => {
+                    this.$refs.auth_secret.focus();
+                }, 500)
+                return
+            }
+
+            let user = await auth.register(account, password);
+            if (user) {
+                Swal.fire({
+                    title: '註冊成功',
+                    html: '請登入',
+                    icon: 'success'
+                })
+                await auth.signOut();
+                this.initAuth();
+            } else {
+                Swal.fire({
+                    title: '註冊失敗',
+                    html: '請稍後再試',
+                    icon: 'error'
+                })
+            }
+        },
         authed(user) {
-            this.user = user;
             console.log('authed')
+            this.user = user;
             this.isAuth = true;
         },
         unauthed() {
             console.log('unauthed')
+            this.user = {};
+            this.isAuth = false;
         }
     },
     mounted() {

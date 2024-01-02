@@ -48,7 +48,7 @@
                     <input type="password" id="todo-password" placeholder="密碼" v-model="auth.secret" ref="auth_secret">
                 </div>
                 <div class="todo-input" style="justify-content: space-between;">
-                    <button id="todo-register-btn" class="linker">註冊</button>
+                    <button id="todo-register-btn" class="linker" @click.prevent="register">註冊</button>
                     <button id="todo-signin-btn" @click.prevent="login">登入</button>
                 </div>
             </div>
