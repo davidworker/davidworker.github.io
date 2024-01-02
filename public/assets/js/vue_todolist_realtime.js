@@ -73,12 +73,19 @@ Vue.createApp({
                 icon: 'success'
             })
             this.isAuth = false
+        },
+        authed(user) {
+            this.user = user;
+            console.log('authed')
+            this.isAuth = true;
+        },
+        unauthed() {
+            console.log('unauthed')
         }
     },
     mounted() {
-        // const app = await App.init();
-        // this.firebase.auth = new Auth(app);
-        // this.firebase.database = new Database(app);
+        auth.onChange(this.authed, this.unauthed);
         console.log('todo app is mounted.')
+
     }
 }).mount('#todo-app')
