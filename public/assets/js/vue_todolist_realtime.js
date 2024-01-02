@@ -55,6 +55,8 @@ Vue.createApp({
                 })
                 this.user = user;
                 this.isAuth = true;
+                this.auth.account = '';
+                this.auth.secret = '';
             } else {
                 Swal.fire({
                     title: '登入失敗',
@@ -62,6 +64,15 @@ Vue.createApp({
                     icon: 'error'
                 })
             }
+        },
+        async logout() {
+            await auth.signOut()
+            await Swal.fire({
+                title: '登出成功',
+                html: `已登出，請重新登入`,
+                icon: 'success'
+            })
+            this.isAuth = false
         }
     },
     mounted() {
