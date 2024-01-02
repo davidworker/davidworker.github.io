@@ -41,7 +41,7 @@
             <div class="tabs" v-show="!isAuth">
                 <h1>請輸入帳號 {{ auth.account }}</h1>
                 <div class="todo-input">
-                    <input type="email" id="todo-account" placeholder="Email" v-model="auth.account">
+                    <input type="email" id="todo-account" placeholder="Email" v-model="auth.account" ref="auth_account">
                 </div>
                 <h1>請輸入密碼</h1>
                 <div class="todo-input">
@@ -49,7 +49,7 @@
                 </div>
                 <div class="todo-input" style="justify-content: space-between;">
                     <button id="todo-register-btn" class="linker">註冊</button>
-                    <button id="todo-signin-btn">登入</button>
+                    <button id="todo-signin-btn" @click.prevent="login">登入</button>
                 </div>
             </div>
         </div>
