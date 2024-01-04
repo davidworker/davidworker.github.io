@@ -1,0 +1,18 @@
+{
+    "home": {
+        "name": "Home",
+        "link": "index.html"
+    },
+    "product": {
+        "name": "Product",
+        "link": "#product"
+    },
+    "cart": {
+        "name": "Cart",
+        "link": "cart.html"
+    },
+    "member": {
+        "name": "Member",
+        "link": "member.html"
+    }
+}

@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "中式料理",
+        "cover": "assets/images/food-1.jpg",
+        "price": 100,
+        "content": "美味的中式"
+    },
+    {
+        "id": 2,
+        "name": "廣式料理",
+        "cover": "assets/images/food-2.jpg",
+        "price": 150,
+        "content": "美味的廣式"
+    },
+    {
+        "id": 3,
+        "name": "西式料理",
+        "cover": "assets/images/food-3.jpg",
+        "price": 200,
+        "content": "美味的西式"
+    },
+    {
+        "id": 4,
+        "name": "日式料理",
+        "cover": "assets/images/food-4.jpg",
+        "price": 300,
+        "content": "美味的日式"
+    }
+]

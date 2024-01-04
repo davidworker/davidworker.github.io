@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Shopping</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="header-wrap">
+                <div>LOGO</div>
+                <div>
+                    <ul class="header-menu" id="header-menu">
+                        <li v-for="(item, index) in items">
+                            <a :href="item.link">{{ item.name }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="" id="product-app">
+        <div class="container">
+            <h1>Product List</h1>
+            <div class="product-wrap">
+                <template v-for="(item, index) in items">
+                    <div class="product-item">
+                        <div class="product-cover" :style="{'background-image': `url(${item.cover})`}"></div>
+                        <div class="product-info">
+                            <div class="product-name">{{ item.name }}</div>
+                            <div class="product-price">{{ item.price }}</div>
+                            <div class="product-content">{{ item.content }}</div>
+                        </div>
+                        <div class="product-add-cart">
+                            <button @click.prevent="addToCart(item)">加入購物車</button>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="assets/js/main.js"></script>
+
+</html>

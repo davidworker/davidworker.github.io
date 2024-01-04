@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Shopping</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="header-wrap">
+                <div>LOGO</div>
+                <div>
+                    <ul class="header-menu" id="header-menu">
+                        <li v-for="(item, index) in items">
+                            <a :href="item.link">{{ item.name }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="" id="cart-app">
+        <div class="container">
+            <h1>Cart List</h1>
+            <div class="cart-wrap">
+                <template v-for="(item, index) in items">
+                    <div class="cart-item">
+                        <div class="cart-cover" :style="{'background-image': `url(${item.cover})`}"></div>
+                        <div class="cart-info">
+                            <div class="cart-name">{{ item.name }}</div>
+                            <div class="cart-price">{{ item.price }} x {{ item.qty }} = {{ item.price * item.qty }}
+                            </div>
+                            <div class="cart-content">{{ item.content }}</div>
+                            <div class="cart-fn">
+                                <span @click.prevent="addQty(item)">增加數量</span>
+                                <span @click.prevent="minusQty(item)">減少數量</span>
+                                <span @click.prevent="remove(item)" class="danger">移除項目</span>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+            <div class="cart-total">小計: {{ calcTotal() }}</div>
+            <div>
+                <a href="checkout.html">Checkout</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="assets/js/cart.js"></script>
+
+</html>
